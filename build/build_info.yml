@@ -1,0 +1,61 @@
+cmake:
+  application:
+    configuration-dir: '/home/vishnu/zephyrproject/zephyr/projects_collage/cattel'
+    source-dir: '/home/vishnu/zephyrproject/zephyr/projects_collage/cattel'
+  board:
+    name: 'esp32_devkitc'
+    path:
+     - '/home/vishnu/zephyrproject/zephyr/boards/espressif/esp32_devkitc'
+    qualifiers: 'esp32/procpu'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/vishnu/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/vishnu/zephyrproject/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu.dts'
+     - 'boards/esp32_devkitc.overlay'
+    include-dirs:
+     - '/home/vishnu/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/vishnu/zephyrproject/modules/hal/atmel/include'
+     - '/home/vishnu/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/vishnu/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/vishnu/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/vishnu/zephyrproject/modules/hal/microchip/include'
+     - '/home/vishnu/zephyrproject/modules/hal/microchip/dts'
+     - '/home/vishnu/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/vishnu/zephyrproject/modules/hal/nxp/dts'
+     - '/home/vishnu/zephyrproject/modules/hal/stm32/dts'
+     - '/home/vishnu/zephyrproject/modules/hal/ti/dts'
+     - '/home/vishnu/zephyrproject/zephyr/include'
+     - '/home/vishnu/zephyrproject/zephyr/include/zephyr'
+     - '/home/vishnu/zephyrproject/zephyr/dts/common'
+     - '/home/vishnu/zephyrproject/zephyr/dts/vendor'
+     - '/home/vishnu/zephyrproject/zephyr/dts/rx'
+     - '/home/vishnu/zephyrproject/zephyr/dts/x86'
+     - '/home/vishnu/zephyrproject/zephyr/dts/xtensa'
+     - '/home/vishnu/zephyrproject/zephyr/dts/sparc'
+     - '/home/vishnu/zephyrproject/zephyr/dts/riscv'
+     - '/home/vishnu/zephyrproject/zephyr/dts/posix'
+     - '/home/vishnu/zephyrproject/zephyr/dts/arm64'
+     - '/home/vishnu/zephyrproject/zephyr/dts/arm'
+     - '/home/vishnu/zephyrproject/zephyr/dts/arc'
+     - '/home/vishnu/zephyrproject/zephyr/dts'
+    user-files:
+     - 'boards/esp32_devkitc.overlay'
+  kconfig:
+    files:
+     - '/home/vishnu/zephyrproject/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu_defconfig'
+     - '/home/vishnu/zephyrproject/zephyr/projects_collage/cattel/prj.conf'
+    user-files:
+     - '/home/vishnu/zephyrproject/zephyr/projects_collage/cattel/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/vishnu/zephyr-sdk-0.17.2'
+  zephyr:
+    version: '4.2.99'
+    zephyr-base: '/home/vishnu/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/vishnu/.local/share/pipx/venvs/west/bin/west build -b esp32_devkitc/esp32/procpu -p always .'
+  topdir: '/home/vishnu/zephyrproject'
+  version: '1.3.0'

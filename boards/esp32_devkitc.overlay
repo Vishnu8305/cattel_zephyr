@@ -1,0 +1,14 @@
+&uart1 {
+    status = "okay";
+    current-speed = <9600>;
+};
+
+&uart2 {
+    status = "okay";
+    current-speed = <9600>;
+};
+
+&i2c0 {
+    status = "okay";
+    clock-frequency = <400000>;
+};
